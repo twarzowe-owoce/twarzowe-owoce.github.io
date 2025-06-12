@@ -1,0 +1,15 @@
+body {
+  font-family: sans-serif;
+  padding: 1rem;
+  max-width: 600px;
+  margin: auto;
+}
+section { text-align: center; margin-top: 2rem; }
+#image-container img { max-width: 100%; height: auto; }
+#controls { margin-top: 1rem; }
+.face-btn {
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+}
+#confidence-input { width: 80%; }
+#submit-btn { margin-top: 1rem; }

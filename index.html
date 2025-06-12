@@ -1,1 +1,45 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fruit Face Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Welcome Screen -->
+  <section id="welcome-screen">
+    <h1>Welcome to the Fruit Face Quiz</h1>
+    <p>We’ll show you 10 images—tell us if there’s a face and how confident you are.</p>
+    <button id="start-btn">Start</button>
+  </section>
+
+  <!-- Quiz Screen (hidden until Start) -->
+  <section id="quiz-screen" hidden>
+    <div id="image-container">
+      <img id="quiz-image" src="" alt="Quiz Image" />
+    </div>
+    <div id="controls">
+      <div>
+        <button class="face-btn" data-value="true">Face</button>
+        <button class="face-btn" data-value="false">No Face</button>
+      </div>
+      <label>
+        Confidence:
+        <input id="confidence-input" type="range" min="0" max="100" value="50"/>
+        <span id="confidence-display">50%</span>
+      </label>
+      <button id="submit-btn" disabled>Submit</button>
+    </div>
+    <p id="progress">Image <span id="current-index">0</span> of 10</p>
+  </section>
+
+  <!-- Thank You Screen (hidden until done) -->
+  <section id="thankyou-screen" hidden>
+    <h2>Thank you for participating!</h2>
+    <button id="restart-btn">Restart Quiz</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
