@@ -44,17 +44,21 @@ async function sendToHygraph(response) {
 const TOTAL_IMAGES = 10;
 const IMAGE_PATH = 'images/';
 const IMAGE_FILENAMES = [
-  'orange_1.jpg',
-  'orange_2.jpg',
-  'orange_3.jpg',
-  'orange_4.jpg',
-  'orange_5.jpg',
-  'orange_6.jpg',
-  'orange_7.jpg',
-  'orange_8.jpg',
-  'orange_9.jpg',
-  'orange_10.jpg',
-  'orange_1`.jpg'
+  'image.webp',
+  'image2.webp',
+  'image3.webp',
+  'image4.webp',
+  'image5.webp',
+  'image6.webp',
+  'image7.webp',
+  'image8.webp',
+  'image9.webp',
+  'image10.webp',
+  'image11.webp',
+  'image12.png',
+  'image13.webp',
+  'image14.webp',
+  'image15.webp'
 ];
 
 console.log("test 2")
@@ -118,8 +122,12 @@ faceBtns.forEach(btn =>
 );
 
 confInput.addEventListener('input', () => {
-  confDisplay.textContent = confInput.value + '%';
+  const pct = confInput.value;
+  confDisplay.textContent = pct + '%';
+  // update CSS variable for track fill
+  confInput.style.setProperty('--slider-percent', pct + '%');
 });
+
 
 submitBtn.addEventListener('click', () => {
   // 1) Gather response data
@@ -172,3 +180,4 @@ function endQuiz() {
   console.log('All responses:', responses);
   // TODO: here you can batch-send `responses` to your backend via fetch()
 }
+
